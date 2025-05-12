@@ -1,0 +1,33 @@
+-- CreateTable
+CREATE TABLE "forms" (
+    "id" TEXT NOT NULL,
+    "fullName" TEXT NOT NULL,
+    "professionalName" TEXT NOT NULL,
+    "crpNumber" TEXT NOT NULL,
+    "location" TEXT NOT NULL,
+    "targetAudience" TEXT NOT NULL,
+    "specialties" TEXT NOT NULL,
+    "appointmentType" TEXT NOT NULL,
+    "mainMessage" TEXT NOT NULL,
+    "preferredColors" TEXT NOT NULL,
+    "avoidColors" TEXT NOT NULL,
+    "style" TEXT NOT NULL,
+    "otherStyle" TEXT NOT NULL,
+    "bio" TEXT NOT NULL,
+    "instagram" TEXT NOT NULL,
+    "linkedin" TEXT NOT NULL,
+    "inspirationLinks" TEXT NOT NULL,
+    "domainPreference" TEXT NOT NULL,
+    "domainSuggestions" TEXT NOT NULL,
+    "whatsapp" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
+    "appointmentLink" TEXT NOT NULL,
+    "testimonials" TEXT NOT NULL,
+    "contactForm" TEXT NOT NULL,
+    "blogLink" TEXT NOT NULL,
+    "additionalRequests" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "forms_pkey" PRIMARY KEY ("id")
+);

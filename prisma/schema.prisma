@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Form {
+  id                String @id @default(uuid())
+  fullName          String
+  professionalName  String
+  crpNumber         String 
+  location          String
+  // Focus
+  targetAudience    String
+  specialties       String
+  appointmentType   String
+  mainMessage       String
+  // Visual
+  preferredColors   String
+  avoidColors       String
+  style             String
+  otherStyle        String
+  // Content
+  bio               String
+  instagram         String
+  linkedin          String
+  inspirationLinks  String
+  // Domain
+  domainPreference  String
+  domainSuggestions String
+  // Contact
+  whatsapp          String
+  email             String
+  appointmentLink   String
+  // Extras
+  testimonials      Boolean
+  contactForm       Boolean
+  blogLink          Boolean
+  additionalRequests String
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("forms")
+}
