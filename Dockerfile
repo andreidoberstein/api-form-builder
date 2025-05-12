@@ -23,4 +23,4 @@ COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 RUN npm install --omit=dev
 
 EXPOSE 3000
-CMD ["node", "dist/src/main"]
+CMD ["node", "dist/main"]
